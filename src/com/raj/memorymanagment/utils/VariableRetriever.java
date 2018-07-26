@@ -1,6 +1,6 @@
-package com.flipkart.machinecoding.utils;
+package com.raj.memorymanagment.utils;
 
-import com.flipkart.machinecoding.entities.Variable;
+import com.raj.memorymanagment.entities.Variable;
 
 import java.util.List;
 

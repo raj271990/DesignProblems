@@ -1,4 +1,4 @@
-package com.flipkart.machinecoding.entities;
+package com.raj.memorymanagment.entities;
 
 import java.util.ArrayList;
 import java.util.List;

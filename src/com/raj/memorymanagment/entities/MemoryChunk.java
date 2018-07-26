@@ -1,4 +1,4 @@
-package com.flipkart.machinecoding.entities;
+package com.raj.memorymanagment.entities;
 
 public class MemoryChunk implements Comparable<MemoryChunk> {
 

@@ -1,7 +1,7 @@
-package com.flipkart.machinecoding.entities;
+package com.raj.memorymanagment.entities;
 
-import com.flipkart.machinecoding.utils.ProcessRetriever;
-import com.flipkart.machinecoding.utils.VariableRetriever;
+import com.raj.memorymanagment.utils.ProcessRetriever;
+import com.raj.memorymanagment.utils.VariableRetriever;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MemoryManager {
 
-    private List<Process> processes;
+    private List<com.raj.memorymanagment.entities.Process> processes;
     private Memory memory;
     private List<MemoryChunk> allocatedMemoryChunks;
 
@@ -62,10 +62,10 @@ public class MemoryManager {
         memory.updateAllocatedBlocks(newChunks, true);
 
         // Check if process already exists
-        Process process = ProcessRetriever.retrievebyProcessName(processName, processes);
+        com.raj.memorymanagment.entities.Process process = ProcessRetriever.retrievebyProcessName(processName, processes);
 
         if(process == null) {
-            process = new Process(processName);
+            process = new com.raj.memorymanagment.entities.Process(processName);
             processes.add(process);
         }
 
@@ -182,7 +182,7 @@ public class MemoryManager {
 
     public void free(String processName, String variableName) {
 
-        Process process = ProcessRetriever.retrievebyProcessName(processName, processes);
+        com.raj.memorymanagment.entities.Process process = ProcessRetriever.retrievebyProcessName(processName, processes);
 
         Variable var = VariableRetriever.retrievebyVariableName(variableName, process.getVariables());
 
@@ -199,7 +199,7 @@ public class MemoryManager {
 
     public void kill(String processName) {
 
-        Process process = ProcessRetriever.retrievebyProcessName(processName, processes);
+        com.raj.memorymanagment.entities.Process process = ProcessRetriever.retrievebyProcessName(processName, processes);
 
         List<Variable> processVars = process.getVariables();
 
@@ -217,7 +217,7 @@ public class MemoryManager {
 
     public void inspect(String processName) {
 
-        Process process = ProcessRetriever.retrievebyProcessName(processName, processes);
+        com.raj.memorymanagment.entities.Process process = ProcessRetriever.retrievebyProcessName(processName, processes);
 
         if(process == null) return;
 

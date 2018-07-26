@@ -1,7 +1,7 @@
-package com.flipkart.machinecoding;
+package com.raj.memorymanagment;
 
-import com.flipkart.machinecoding.entities.Memory;
-import com.flipkart.machinecoding.entities.MemoryManager;
+import com.raj.memorymanagment.entities.Memory;
+import com.raj.memorymanagment.entities.MemoryManager;
 
 public class Client {
 
